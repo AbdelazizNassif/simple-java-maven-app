@@ -9,8 +9,7 @@ pipeline {
         stage('Build') { 
             steps {
                 
-                
-                sh 'mvn test -Pregression' 
+                sh 'mvn -B -DskipTests clean package' 
 
             }
         }
